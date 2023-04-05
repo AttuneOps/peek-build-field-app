@@ -1,0 +1,6 @@
+{
+    "key": "peekfieldservicehostip", 
+    "name": "Peek Field Service Host / IP", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

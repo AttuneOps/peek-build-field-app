@@ -1,0 +1,6 @@
+{
+    "key": "appid", 
+    "name": "App ID", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

@@ -1,0 +1,6 @@
+{
+    "key": "peekfieldserviceusessl", 
+    "name": "Peek Field Service - Use SSL", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

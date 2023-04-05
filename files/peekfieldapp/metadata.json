@@ -1,0 +1,10 @@
+{
+    "fileName": "230405_1342_peek_field_app.tar.bz2", 
+    "formatKey": "tar.bz2", 
+    "key": "peekfieldapp", 
+    "md5": "853e3f54e5baf131881434ffe00a273c", 
+    "name": "peek_field_app", 
+    "remoteUri": null, 
+    "size": 7061438, 
+    "type": "com.servertribe.attune.tuples.FileArchiveLargeTuple"
+}

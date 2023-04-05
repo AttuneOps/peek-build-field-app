@@ -1,0 +1,6 @@
+{
+    "key": "peekfieldserviceport", 
+    "name": "Peek Field Service Port", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

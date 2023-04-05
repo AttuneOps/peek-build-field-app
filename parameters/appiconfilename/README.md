@@ -1,0 +1,1 @@
+The app icon to use.

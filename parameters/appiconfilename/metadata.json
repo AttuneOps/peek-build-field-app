@@ -1,0 +1,6 @@
+{
+    "key": "appiconfilename", 
+    "name": "App Icon File Name", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

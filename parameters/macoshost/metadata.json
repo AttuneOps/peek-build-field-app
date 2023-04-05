@@ -1,0 +1,6 @@
+{
+    "key": "macoshost", 
+    "name": "macOS Host", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.LinuxServer"
+}
