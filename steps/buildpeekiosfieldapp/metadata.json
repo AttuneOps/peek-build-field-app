@@ -3,7 +3,16 @@
     "enabled": true, 
     "isBlueprint": true, 
     "key": "buildpeekiosfieldapp", 
-    "links": [], 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "pullfieldappfrompeekserver"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "deploypeekfieldapp"
+        }
+    ], 
     "name": "Build Peek IOS Field App", 
     "type": "com.servertribe.attune.tuples.StepGroupTuple"
 }

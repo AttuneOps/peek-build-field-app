@@ -1,0 +1,11 @@
+{
+    "enabled": true, 
+    "interpreter": 1, 
+    "key": "pullfieldappfrompeekserver", 
+    "name": "Pull field app from peek server", 
+    "osCredKey": "macosuser", 
+    "promptResponses": "no match ===", 
+    "serverKey": "peekfieldappsourcenode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshPromptedTuple"
+}

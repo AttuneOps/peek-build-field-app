@@ -1,0 +1,11 @@
+{
+    "archiveKey": "peekfieldapp", 
+    "deployPath": "{appBuildDirectory}/{appId}", 
+    "enabled": true, 
+    "key": "deploypeekfieldapp", 
+    "name": "Deploy peek_field_app", 
+    "osCredKey": "macosuser", 
+    "serverKey": "macoshost", 
+    "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
+    "unpack": true
+}

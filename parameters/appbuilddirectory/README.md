@@ -1,0 +1,1 @@
+The local macOS directory where the app will be built.

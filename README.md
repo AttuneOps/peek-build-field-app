@@ -109,14 +109,16 @@ This Project contains the following Blueprints.
 
 | Name | Type | Script Reference | Comment |
 | ---- | ---- | ---------------- | ------- |
+| App Build Directory | Text | `appbuilddirectory` | The local macOS directory where the app will be built. |
+| App Icon File Name | Text | `appiconfilename` | The app icon to use. |
+| App ID | Text | `appid` | The AppId to build Peek with, EG, com.synerty.peek |
+| App Primary Colour | Text | `appprimarycolour` | Leave unset for production. For DEV, TEST, etc, set this to the background colour you'd like the app to use, EG #ff9900 |
 | macOS Host | Linux/Unix Node | `macoshost` | The macOS host to build the app on. |
 | macOS User | Linux/Unix Credential | `macosuser` | The unix user to login to the macOS host with |
-| App Primary Colour | Text | `appprimarycolour` | Leave unset for production. For DEV, TEST, etc, set this to the background colour you'd like the app to use, EG #ff9900 |
-| App ID | Text | `appid` | The AppId to build Peek with, EG, com.synerty.peek |
-| Peek Field Service Port | Text | `peekfieldserviceport` | The TCP Port used to for the Peek Field App talk to the Peek Field Service |
+| Peek Field App Source Node | Linux/Unix Node | `peekfieldappsourcenode` | The Peek server running the peek field service that we can pull the peek_field_app from. |
 | Peek Field Service Host / IP | Text | `peekfieldservicehostip` | The hostname or IP address used to for the Peek Field App talk to the Peek Field Service |
+| Peek Field Service Port | Text | `peekfieldserviceport` | The TCP Port used to for the Peek Field App talk to the Peek Field Service |
 | Peek Field Service - Use SSL | Text | `peekfieldserviceusessl` | true or false - Should the Peek Field App expect to use SSL to talk to the Peek Field Service |
-| App Icon File Name | Text | `appiconfilename` | The app icon to use. |
 
 
 

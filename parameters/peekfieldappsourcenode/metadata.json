@@ -1,0 +1,6 @@
+{
+    "key": "peekfieldappsourcenode", 
+    "name": "Peek Field App Source Node", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.LinuxServer"
+}
