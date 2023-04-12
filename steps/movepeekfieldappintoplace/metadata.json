@@ -1,0 +1,10 @@
+{
+    "enabled": true, 
+    "interpreter": 1, 
+    "key": "movepeekfieldappintoplace", 
+    "name": "Move peek_field_app into place", 
+    "osCredKey": "macosuser", 
+    "serverKey": "macoshost", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

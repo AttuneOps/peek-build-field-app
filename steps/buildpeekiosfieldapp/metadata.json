@@ -11,6 +11,10 @@
         {
             "order": 50, 
             "stepKey": "deploypeekfieldapp"
+        }, 
+        {
+            "order": 100, 
+            "stepKey": "movepeekfieldappintoplace"
         }
     ], 
     "name": "Build Peek IOS Field App", 

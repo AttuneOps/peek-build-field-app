@@ -110,6 +110,8 @@ This Project contains the following Blueprints.
 | Name | Type | Script Reference | Comment |
 | ---- | ---- | ---------------- | ------- |
 | App Build Directory | Text | `appbuilddirectory` | The local macOS directory where the app will be built. |
+| App Build Version | Text | `appbuildversion` | Example 12345678 |
+| App Dot Version | Text | `appdotversion` | Example 1.2.3.4 |
 | App Icon File Name | Text | `appiconfilename` | The app icon to use. |
 | App ID | Text | `appid` | The AppId to build Peek with, EG, com.synerty.peek |
 | App Primary Colour | Text | `appprimarycolour` | Leave unset for production. For DEV, TEST, etc, set this to the background colour you'd like the app to use, EG #ff9900 |

@@ -1,0 +1,6 @@
+{
+    "key": "appbuildversion", 
+    "name": "App Build Version", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}
