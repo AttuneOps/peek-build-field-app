@@ -1,0 +1,6 @@
+{
+    "key": "apppeekhardcodedhostport", 
+    "name": "App Peek Hardcoded Host Port", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

@@ -1,0 +1,11 @@
+DIR="{appBuildDirectory}/{appId}"
+cd "$DIR"
+
+if [ '{appEnvironment}' = 'DEV' ]
+then
+
+
+else
+    echo "Unknown environment |{appEnvironment}|" >&2
+    false
+fi

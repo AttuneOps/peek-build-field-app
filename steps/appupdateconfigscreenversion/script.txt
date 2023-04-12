@@ -1,0 +1,14 @@
+DIR="{appBuildDirectory}/{appId}"
+cd "$DIR"
+
+CONFIG_TS="src/app/pages/config/config.page.ts"
+
+sed -iv 's/Peek Config/{appEnvironment} Peek Config/g' \
+    "${CONFIG_TS}"
+
+
+VERSION_TS="src/environments/peek-app-environment.ts"
+
+
+sed -iv 's/version:.*/version: "v{appDotVersion} b{appBuildVersion}",/g' \
+    "${CONFIG_TS}"

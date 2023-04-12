@@ -1,0 +1,30 @@
+{
+    "concurrency": 1, 
+    "enabled": true, 
+    "isBlueprint": false, 
+    "key": "personaliseapp", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "apphardcodepeekhost"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "appupdateappbackgroundcolour"
+        }, 
+        {
+            "order": 100, 
+            "stepKey": "appupdatedisplayname"
+        }, 
+        {
+            "order": 150, 
+            "stepKey": "appupdateconfigscreenversion"
+        }, 
+        {
+            "order": 200, 
+            "stepKey": "apphardcodeconnectionsettings"
+        }
+    ], 
+    "name": "Personalise App", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

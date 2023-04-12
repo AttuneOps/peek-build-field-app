@@ -1,0 +1,18 @@
+{
+    "concurrency": 1, 
+    "enabled": true, 
+    "isBlueprint": false, 
+    "key": "pullappfrompeekhost", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "pullfieldappfrompeekserver"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "movepeekfieldappintoplace"
+        }
+    ], 
+    "name": "Pull App from Peek Host", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

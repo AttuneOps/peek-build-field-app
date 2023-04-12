@@ -1,0 +1,10 @@
+
+DIR="{appBuildDirectory}/{appId}"
+
+if [ -d "$DIR" ]
+then
+    echo "Removing build directory"
+    rm -rf "$DIR"
+else
+    echo "Directory doesn't exist, good."
+fi

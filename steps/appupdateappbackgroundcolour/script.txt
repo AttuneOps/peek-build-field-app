@@ -1,0 +1,29 @@
+DIR="{appBuildDirectory}/{appId}"
+cd "$DIR"
+
+SCSS="src/_variables.scss"
+
+if [ '{appEnvironment}' = 'DEV' ]
+then
+    echo "Updating to DEV Orange"
+    sed -i 's/$primary-color:.*/$primary-color: #ff9900;/g' $SCSS
+    
+elif  [ '{appEnvironment}' = 'SIT' ]
+then
+    echo "Updating to SIT Green"
+    sed -i 's/$primary-color:.*/$primary-color: #75f497;/g' $SCSS
+
+elif  [ '{appEnvironment}' = 'UAT' ]
+then
+    echo "Updating to UAT Puple"
+    sed -i 's/$primary-color:.*/$primary-color: #800080;/g' $SCSS
+
+
+elif  [ '{appEnvironment}' = 'PRD' ]
+then
+    echo "Production stays as is."
+    
+else
+    echo "Unknown environment |{appEnvironment}|" >&2
+    false
+fi

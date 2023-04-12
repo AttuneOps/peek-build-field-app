@@ -1,6 +1,5 @@
 
 DIR="{appBuildDirectory}/{appId}"
-mkdir -pv "$DIR"
 cd "$DIR"
 
 echo "Creating remote TAR"

@@ -1,0 +1,6 @@
+{
+    "key": "appdisplayname", 
+    "name": "App Display Name", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

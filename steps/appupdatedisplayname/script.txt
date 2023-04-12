@@ -1,0 +1,7 @@
+DIR="{appBuildDirectory}/{appId}"
+cd "$DIR"
+
+JSON="capacitor.config.json"
+
+jq '.appName = "{appDisplayName}"' $JSON 
+jq '.appId = "{appId}"' $JSON 

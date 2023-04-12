@@ -1,19 +1,25 @@
 source "{appBuildDirectory}/{appId}/attune_xcode_settings.sh"
 cd $XCODE_SOURCE_FOLDER
 
-# app version
-/usr/libexec/Plistbuddy \
-    -c 'Delete CFBundleShortVersionString' Info.plist || true
+xcrun agvtool new-version -all {appBuildVersion}
 
-/usr/libexec/Plistbuddy \
-    -c "Add CFBundleShortVersionString string {appDotVersion}"  \
-    Info.plist
+xcrun agvtool new-marketing-version {appDotVersion}
 
-# build version
-/usr/libexec/Plistbuddy \
-    -c 'Delete CFBundleVersion' Info.plist || true
+# # app version
+# /usr/libexec/Plistbuddy \
+#     -c 'Delete CFBundleShortVersionString' Info.plist || true
+
+# /usr/libexec/Plistbuddy \
+#     -c "Add CFBundleShortVersionString string {appDotVersion}"  \
+#     Info.plist
+
+# # build version
+# /usr/libexec/Plistbuddy \
+#     -c 'Delete CFBundleVersion' Info.plist || true
 
 
-/usr/libexec/PlistBuddy \
-    -c "Add CFBundleVersion string {appBuildVersion}" Info.Plist
+# /usr/libexec/PlistBuddy \
+#     -c "Add CFBundleVersion string {appBuildVersion}" Info.Plist
 
+sed -iv 's/MARKETING_VERSION = .*/MARKETING_VERSION = {appDotVersion};/g' \
+    *xcodeproj/project.pbxproj

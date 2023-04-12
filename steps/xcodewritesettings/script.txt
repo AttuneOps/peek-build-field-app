@@ -40,7 +40,7 @@ echo "export XCODE_PROVISIONING_PROFILE_UUID=${XCODE_PROVISIONING_PROFILE_UUID}"
 cat <<'EOF' >> attune_xcode_settings.sh
 
 # script default
-export XCODE_APP_NAME='App'
+export XCODE_APP_NAME='{appDisplayName}'
 
 
 # override defaults by arguments

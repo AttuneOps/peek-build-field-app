@@ -127,6 +127,12 @@ This Project contains the following Blueprints.
 | App Export Directory | Text | `appexportdirectory` | The directory where apps will be placed. /Users/peek/Downloads |
 | XCode Provisioning Profile Name | Text | `xcodeprovisioningprofilename` | None |
 | XCode Provisioning Profile UUID | Text | `xcodeprovisioningprofileuuid` | None |
+| XCode Auto Code Sign Style | Text | `xcodeautocodesignstyle` | Values: true or falce |
+| App Peek Hardcoded Host Port | Text | `apppeekhardcodedhostport` | The port for the app to connect to, for example 443 |
+| App Peek Hardcoded Host | Text | `apppeekhardcodedhost` | None |
+| App Peek Hardcoded Host Use SSL | Text | `apppeekhardcodedhostusessl` | true or false |
+| App Environment | Text | `appenvironment` | DEV, TEST, UAT, PROD |
+| App Display Name | Text | `appdisplayname` | None |
 
 
 
