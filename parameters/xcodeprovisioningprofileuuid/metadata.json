@@ -1,0 +1,6 @@
+{
+    "key": "xcodeprovisioningprofileuuid", 
+    "name": "XCode Provisioning Profile UUID", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

@@ -13,28 +13,37 @@ export XCODE_PROFILE_DIR="${HOME}/Library/MobileDevice/Provisioning Profiles"
 # parameter defaults
 
 # public version on App Store page
-XCODE_APP_VERSION='{appDotVersion}'
+export XCODE_APP_VERSION='{appDotVersion}'
 
 # CI job number, internal version for technical purposes
-XCODE_BUILD_VERSION='{appBuildVersion}'
+export XCODE_BUILD_VERSION='{appBuildVersion}'
 
 # app bundle identifier
-XCODE_APP_BUNDLE_IDENTIFIER='{appId}'
+export XCODE_APP_BUNDLE_IDENTIFIER='{appId}'
 
 # Apple Developer Team ID
-XCODE_DEVELOPEMENT_TEAM_ID='{xcodeTeam}'
+export XCODE_DEVELOPEMENT_TEAM_ID='{xcodeTeam}'
 
 # UUID of mobile provisioning profile
-XCODE_PROVISIONING_PROFILE_NAME='{xcodeProvisioningProfile}'
+export XCODE_PROVISIONING_PROFILE_NAME="{xcodeProvisioningProfileName}"
+EOF
+
+source attune_xcode_settings.sh
+pushd "${XCODE_PROFILE_DIR}"
+XCODE_PROVISIONING_PROFILE_UUID="$(grep -l '{xcodeProvisioningProfileName}' * | sed 's/.mobileprovision//g')"
+popd
+
+echo "export XCODE_PROVISIONING_PROFILE_UUID=${XCODE_PROVISIONING_PROFILE_UUID}" \
+     >> attune_xcode_settings.sh
+
+
+cat <<'EOF' >> attune_xcode_settings.sh
 
 # script default
 export XCODE_APP_NAME='App'
 
 
 # override defaults by arguments
-export XCODE_DEVELOPEMENT_TEAM_ID="${ARG_TEAM_ID}"
-export XCODE_APP_BUNDLE_IDENTIFIER="${ARG_BUNDLE_ID}"
-export XCODE_PROVISIONING_PROFILE_UUID="${ARG_PROVISIONING_PROFILE_UUID}"
 
 # automatic populated parameters for xcode
 # relative to source folder above
@@ -44,7 +53,7 @@ export XCODE_SCHEME=$XCODE_APP_NAME
 export XCODE_CACHED_PROVISIONING_PROFILE_PATH="${XCODE_PROFILE_DIR}/${XCODE_PROVISIONING_PROFILE_UUID}.mobileprovision"
 
 export XCODE_ARCHIVE_PATH="{appExportDirectory}/peek_${XCODE_BUILD_VERSION}_${XCODE_APP_VERSION}_${NOW}"
-export XCODE_IPA_EXPORT_PATH="{appExportDirectory}/ipa_peek_${XCODE_BUILD_VERSION}_$XCODE_APP_VERSION_$NOW"
+export XCODE_IPA_EXPORT_PATH="{appExportDirectory}/ipa_peek_${XCODE_BUILD_VERSION}_${XCODE_APP_VERSION}_${NOW}"
 
 
 export XCODE_BUILT_ARCHIVE_FOLDER="${XCODE_ARCHIVE_PATH}.xcarchive"

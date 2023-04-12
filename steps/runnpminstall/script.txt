@@ -1,0 +1,4 @@
+DIR="{appBuildDirectory}/{appId}"
+cd "$DIR"
+
+npm install

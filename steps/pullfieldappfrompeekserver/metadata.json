@@ -5,7 +5,7 @@
     "name": "Pull field app from peek server", 
     "osCredKey": "macosuser", 
     "promptResponses": "password:==={peekFieldAppSourceLinuxUser.password}", 
-    "serverKey": "peekfieldappsourcenode", 
+    "serverKey": "macoshost", 
     "successExitCode": 0, 
     "type": "com.servertribe.attune.tuples.StepSshPromptedTuple"
 }

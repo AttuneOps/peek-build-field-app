@@ -124,8 +124,9 @@ This Project contains the following Blueprints.
 | Peek Field App Source Linux User | Linux/Unix Credential | `peekfieldappsourcelinuxuser` | None |
 | Build for Production | Text | `buildforproduction` | Values: true or false |
 | XCode Team | Text | `xcodeteam` | None |
-| XCode Provisioning Profile | Text | `xcodeprovisioningprofile` | EG: Synerty iOS Development |
 | App Export Directory | Text | `appexportdirectory` | The directory where apps will be placed. /Users/peek/Downloads |
+| XCode Provisioning Profile Name | Text | `xcodeprovisioningprofilename` | None |
+| XCode Provisioning Profile UUID | Text | `xcodeprovisioningprofileuuid` | None |
 
 
 

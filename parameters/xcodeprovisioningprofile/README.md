@@ -1,1 +1,0 @@
-EG: Synerty iOS Development

@@ -1,5 +1,7 @@
 DIR="{appBuildDirectory}/{appId}"
 cd "$DIR"
+echo "We're at $(pwd)"
 
 echo Syncing capacitor build
+export LANG=en_US.UTF-8
 npx cap sync

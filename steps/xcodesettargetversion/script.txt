@@ -3,7 +3,7 @@ cd $XCODE_SOURCE_FOLDER
 
 # app version
 /usr/libexec/Plistbuddy \
-    -c 'Delete CFBundleShortVersionString' Info.plist
+    -c 'Delete CFBundleShortVersionString' Info.plist || true
 
 /usr/libexec/Plistbuddy \
     -c "Add CFBundleShortVersionString string {appDotVersion}"  \
@@ -11,7 +11,7 @@ cd $XCODE_SOURCE_FOLDER
 
 # build version
 /usr/libexec/Plistbuddy \
-    -c 'Delete CFBundleVersion' Info.plist
+    -c 'Delete CFBundleVersion' Info.plist || true
 
 
 /usr/libexec/PlistBuddy \

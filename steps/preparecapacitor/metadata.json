@@ -9,27 +9,27 @@
             "stepKey": "pullfieldappfrompeekserver"
         }, 
         {
-            "order": 50, 
-            "stepKey": "deploypeekfieldapp"
-        }, 
-        {
             "order": 100, 
             "stepKey": "movepeekfieldappintoplace"
         }, 
         {
             "order": 150, 
-            "stepKey": "runngbuild"
+            "stepKey": "runnpminstall"
         }, 
         {
             "order": 200, 
-            "stepKey": "runcapsync"
+            "stepKey": "runngbuild"
         }, 
         {
             "order": 250, 
-            "stepKey": "patchingnativeaudioplugin"
+            "stepKey": "runcapsync"
         }, 
         {
             "order": 300, 
+            "stepKey": "patchingnativeaudioplugin"
+        }, 
+        {
+            "order": 350, 
             "stepKey": "runcapcopyios"
         }
     ], 

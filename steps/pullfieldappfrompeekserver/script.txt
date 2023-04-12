@@ -3,14 +3,45 @@ DIR="{appBuildDirectory}/{appId}"
 mkdir -pv "$DIR"
 cd "$DIR"
 
+echo "Creating remote TAR"
 ssh \
     -o StrictHostKeyChecking=no \
     -o UserKnownHostsFile=/dev/null \
     -o PreferredAuthentications=password \
-    {peekFieldAppSourceLinuxUser.user}@{peekFieldAppSourceNode.ip} <<EOF | tar xjf -
-tar cvjf - \
-    --exclude node_modules \
-    -C synerty-peek*/lib/python*/site-packages \
-    peek_field_app
+    {peekFieldAppSourceLinuxUser.user}@{peekFieldAppSourceNode.ip} <<'EOF'
+    NEWEST_DIR="$(ls -1trd synerty-peek*  | tail -1)"
+    if [ -z "${NEWEST_DIR}" ]
+    then
+        echo "ERROR: We can't find the synerty-peek* directory"
+        false
+    else
+        tar cjf peek_field_app.tar.bz2 \
+            --exclude node_modules \
+            -C ${NEWEST_DIR}/lib/python*/site-packages/ \
+            peek_field_app
+    fi
 EOF
 
+echo "Copying remote tar"
+scp \
+    -o StrictHostKeyChecking=no \
+    -o UserKnownHostsFile=/dev/null \
+    -o PreferredAuthentications=password \
+    {peekFieldAppSourceLinuxUser.user}@{peekFieldAppSourceNode.ip}:peek_field_app.tar.bz2 \
+    .
+
+echo "Removing remote TAR"
+ssh \
+    -o StrictHostKeyChecking=no \
+    -o UserKnownHostsFile=/dev/null \
+    -o PreferredAuthentications=password \
+    {peekFieldAppSourceLinuxUser.user}@{peekFieldAppSourceNode.ip} <<EOF
+    rm peek_field_app.tar.bz2
+EOF
+
+
+echo "Extracting TAR"
+tar xjf peek_field_app.tar.bz2
+
+echo "Removing TAR"
+rm -v peek_field_app.tar.bz2
