@@ -1,0 +1,19 @@
+source "{appBuildDirectory}/{appId}/attune_xcode_settings.sh"
+cd $XCODE_SOURCE_FOLDER
+
+# app version
+/usr/libexec/Plistbuddy \
+    -c 'Delete CFBundleShortVersionString' Info.plist
+
+/usr/libexec/Plistbuddy \
+    -c "Add CFBundleShortVersionString string {appDotVersion}"  \
+    Info.plist
+
+# build version
+/usr/libexec/Plistbuddy \
+    -c 'Delete CFBundleVersion' Info.plist
+
+
+/usr/libexec/PlistBuddy \
+    -c "Add CFBundleVersion string {appBuildVersion}" Info.Plist
+

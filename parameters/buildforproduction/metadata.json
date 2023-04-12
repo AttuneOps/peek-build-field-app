@@ -1,0 +1,6 @@
+{
+    "key": "buildforproduction", 
+    "name": "Build for Production", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

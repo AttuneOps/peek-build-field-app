@@ -1,4 +1,5 @@
 DIR="{appBuildDirectory}/{appId}"
 cd "$DIR"
 
-mv -v peek_field_app/* .
+echo Applying patch
+npx cap copy ios

@@ -1,0 +1,4 @@
+source "{appBuildDirectory}/{appId}/attune_xcode_settings.sh"
+cd $XCODE_SOURCE_FOLDER
+
+xcodebuild -showsdks

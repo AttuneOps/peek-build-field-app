@@ -1,0 +1,38 @@
+{
+    "concurrency": 1, 
+    "enabled": true, 
+    "isBlueprint": false, 
+    "key": "preparecapacitor", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "pullfieldappfrompeekserver"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "deploypeekfieldapp"
+        }, 
+        {
+            "order": 100, 
+            "stepKey": "movepeekfieldappintoplace"
+        }, 
+        {
+            "order": 150, 
+            "stepKey": "runngbuild"
+        }, 
+        {
+            "order": 200, 
+            "stepKey": "runcapsync"
+        }, 
+        {
+            "order": 250, 
+            "stepKey": "patchingnativeaudioplugin"
+        }, 
+        {
+            "order": 300, 
+            "stepKey": "runcapcopyios"
+        }
+    ], 
+    "name": "Prepare Capacitor", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

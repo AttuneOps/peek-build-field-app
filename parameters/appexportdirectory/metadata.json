@@ -1,0 +1,6 @@
+{
+    "key": "appexportdirectory", 
+    "name": "App Export Directory", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

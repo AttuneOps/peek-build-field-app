@@ -121,6 +121,11 @@ This Project contains the following Blueprints.
 | Peek Field Service Host / IP | Text | `peekfieldservicehostip` | The hostname or IP address used to for the Peek Field App talk to the Peek Field Service |
 | Peek Field Service Port | Text | `peekfieldserviceport` | The TCP Port used to for the Peek Field App talk to the Peek Field Service |
 | Peek Field Service - Use SSL | Text | `peekfieldserviceusessl` | true or false - Should the Peek Field App expect to use SSL to talk to the Peek Field Service |
+| Peek Field App Source Linux User | Linux/Unix Credential | `peekfieldappsourcelinuxuser` | None |
+| Build for Production | Text | `buildforproduction` | Values: true or false |
+| XCode Team | Text | `xcodeteam` | None |
+| XCode Provisioning Profile | Text | `xcodeprovisioningprofile` | EG: Synerty iOS Development |
+| App Export Directory | Text | `appexportdirectory` | The directory where apps will be placed. /Users/peek/Downloads |
 
 
 

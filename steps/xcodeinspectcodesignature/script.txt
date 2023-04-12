@@ -1,0 +1,27 @@
+source "{appBuildDirectory}/{appId}/attune_xcode_settings.sh"
+cd $XCODE_BUILT_ARCHIVE_FOLDER
+
+appFolder=Products/Applications/*.app
+echo "== inspect archive: code signature =="
+        
+pushd $appFolder
+
+    codesign -d --extract-certificates .
+
+
+    echo
+    echo "--trust chain starts--"
+    echo
+    for certFile in codesign*
+    do
+        openssl x509 -inform DER -in $certFile -noout \
+            -subject -issuer -dates
+        echo
+    done
+    echo "--trust chain ends--"
+    echo
+
+    echo clean up extracted signatures for inspections
+    rm -f codesign*
+
+popd

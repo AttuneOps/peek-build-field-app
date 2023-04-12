@@ -1,0 +1,30 @@
+{
+    "concurrency": 1, 
+    "enabled": true, 
+    "isBlueprint": false, 
+    "key": "archiveiosapp", 
+    "links": [
+        {
+            "order": 200, 
+            "stepKey": "xcodecleanandanalyze"
+        }, 
+        {
+            "order": 250, 
+            "stepKey": "xcodearchiveapp"
+        }, 
+        {
+            "order": 300, 
+            "stepKey": "xcodeinspectarchiveplist"
+        }, 
+        {
+            "order": 350, 
+            "stepKey": "xcodeinspectarchiveprovisioningprofile"
+        }, 
+        {
+            "order": 400, 
+            "stepKey": "xcodeinspectcodesignature"
+        }
+    ], 
+    "name": "Archive iOS App", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

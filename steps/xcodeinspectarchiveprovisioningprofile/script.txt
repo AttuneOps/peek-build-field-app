@@ -1,0 +1,53 @@
+source "{appBuildDirectory}/{appId}/attune_xcode_settings.sh"
+cd $XCODE_BUILT_ARCHIVE_FOLDER
+
+profileInArchive="Products/Applications/${XCODE_APP_NAME}.app/embedded.mobileprovision"
+echo "== inspect archive: mobileprovision file in $profileInArchive =="
+
+echo "--mobile provisioning profile starts--"
+echo
+for key in TeamName TeamIdentifier ExpirationDate Name
+do
+    output=$(/usr/libexec/PlistBuddy \
+       -c 'Print '"${key}" /dev/stdin <<< $(security cms -D -i $profileInArchive))
+
+    echo $key": "$output
+    if [[ $VERIFY_SIGN -eq 1 ]]
+    then
+        case $key in
+        "TeamIdentifier")
+            # substring match
+            if [[ -z "${output##*$XCODE_DEVELOPEMENT_TEAM_ID*}" ]]
+            then
+                echo "Team ID verify - pass"
+            else
+                echo "Team ID verify - fail"
+                exit 1
+            fi
+            ;;
+        "ExpirationDate")
+            _expire=$(date -jf '%a %b %e %H:%M:%S %Z %Y' "${output}" '+%s')
+            _now=$(date '+%s')
+            if [[ $_expire -ge $_now ]]
+            then
+                echo "Expiration date - pass"
+            else
+                echo "Expiration date - fail"
+                exit 1
+            fi
+            ;;
+        "Name")
+            if [[ -z "${output##*$XCODE_PROVISIONING_PROFILE_UUID*}" ]]
+             then
+                echo "Mobileprovision Name - pass"
+            else
+                echo "Mobileprovision Name - fail"
+                exit 1
+            fi
+            ;;
+        esac
+    fi
+    echo
+done
+unset file
+echo "--mobile provisioning profile ends--"

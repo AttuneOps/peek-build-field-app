@@ -1,13 +1,16 @@
-true
 
-# DIR="{appBuildDirectory}/{appId}"
-# mkdir -pv "$DIR"
-# cd "$DIR"
+DIR="{appBuildDirectory}/{appId}"
+mkdir -pv "$DIR"
+cd "$DIR"
 
-# ssh peek@{peekFieldAppSourceNode.ip} <<EOF | tar xjf -
-# tar cvjf - \
-#     --exclude node_modules \
-#     -C synerty-peek*/lib/python*/site-packages \
-#     peek_field_app
-# EOF
+ssh \
+    -o StrictHostKeyChecking=no \
+    -o UserKnownHostsFile=/dev/null \
+    -o PreferredAuthentications=password \
+    {peekFieldAppSourceLinuxUser.user}@{peekFieldAppSourceNode.ip} <<EOF | tar xjf -
+tar cvjf - \
+    --exclude node_modules \
+    -C synerty-peek*/lib/python*/site-packages \
+    peek_field_app
+EOF
 

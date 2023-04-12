@@ -1,0 +1,10 @@
+{
+    "enabled": true, 
+    "interpreter": 1, 
+    "key": "xcodeinspectarchiveplist", 
+    "name": "XCode Inspect Archive PList", 
+    "osCredKey": "macosuser", 
+    "serverKey": "macoshost", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

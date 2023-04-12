@@ -1,0 +1,15 @@
+source "{appBuildDirectory}/{appId}/attune_xcode_settings.sh"
+cd $XCODE_SOURCE_FOLDER
+
+exportOptionsPlistPath="${XCODE_ARCHIVE_PATH}.xcarchive/exportOptionsPlist.plist"
+
+xcodebuild -exportArchive \
+    -quiet \
+    -archivePath $XCODE_ARCHIVE_PATH".xcarchive" \
+    -exportPath $XCODE_IPA_EXPORT_PATH \
+    -exportOptionsPlist "${exportOptionsPlistPath}" \
+    PROVISIONING_PROFILE_SPECIFIER="${XCODE_PROVISIONING_PROFILE_UUID}" \
+    PRODUCT_BUNDLE_IDENTIFIER_APP="${XCODE_APP_BUNDLE_IDENTIFIER}" \
+    DEVELOPEMENT_TEAM="${XCODE_DEVELOPEMENT_TEAM_ID}" \
+    CFBundleShortVersionString="${XCODE_APP_VERSION}" \
+    CFBundleVersion="${XCODE_BUILD_VERSION}"

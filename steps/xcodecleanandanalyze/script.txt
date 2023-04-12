@@ -1,0 +1,9 @@
+source "{appBuildDirectory}/{appId}/attune_xcode_settings.sh"
+cd $XCODE_SOURCE_FOLDER
+
+echo "xcodebuild clean analyze"
+
+xcodebuild clean analyze \
+    -quiet \
+    -workspace $XCODE_WORKSPACE \
+    -scheme $XCODE_SCHEME

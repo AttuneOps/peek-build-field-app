@@ -1,0 +1,41 @@
+source "{appBuildDirectory}/{appId}/attune_xcode_settings.sh"
+cd $XCODE_BUILT_ARCHIVE_FOLDER
+
+infoPlist="Products/Applications/${XCODE_APP_NAME}.app/Info.plist"
+echo "== inspect archive: marked versions in $infoPlist =="
+
+echo "--Info.plist starts--"
+echo
+for key in CFBundleShortVersionString CFBundleVersion
+do
+    output=$(/usr/libexec/PlistBuddy -c 'Print :'"${key}" "$infoPlist")
+    echo $key": "$output
+
+    if [[ $VERIFY_SIGN -eq 1 ]]
+    then
+        case $key in
+        "CFBundleShortVersionString")
+            # app version on app store - public
+            if [[ -z "${output##*$XCODE_APP_VERSION*}" ]]
+            then
+                echo "APP Version - pass"
+            else
+                echo "APP Version - fail"
+                exit 1
+            fi
+            ;;
+        "CFBundleVersion")
+            # build version - technical
+            if [[ -z "${output##*$XCODE_BUILD_VERSION*}" ]]
+            then
+                echo "Build Version - pass"
+            else
+                echo "Build Version - fail"
+                exit 1
+            fi
+            ;;
+        esac
+    fi
+    echo
+done
+echo "--Info.plist ends--"

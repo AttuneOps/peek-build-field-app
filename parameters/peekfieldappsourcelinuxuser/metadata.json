@@ -1,0 +1,6 @@
+{
+    "key": "peekfieldappsourcelinuxuser", 
+    "name": "Peek Field App Source Linux User", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.LinOsCred"
+}

@@ -1,26 +1,26 @@
 {
     "concurrency": 1, 
     "enabled": true, 
-    "isBlueprint": true, 
-    "key": "buildpeekiosfieldapp", 
+    "isBlueprint": false, 
+    "key": "preparexcodeapp", 
     "links": [
         {
             "order": 0, 
-            "stepKey": "preparecapacitor"
+            "stepKey": "xcodewritesettings"
         }, 
         {
             "order": 50, 
-            "stepKey": "preparexcodeapp"
+            "stepKey": "xcodesettargetversion"
         }, 
         {
             "order": 100, 
-            "stepKey": "archiveiosapp"
+            "stepKey": "xcodeshowsdks"
         }, 
         {
             "order": 150, 
-            "stepKey": "buildxcodeipa"
+            "stepKey": "xcodeshowprojectbuildoptions"
         }
     ], 
-    "name": "Build Peek IOS Field App", 
+    "name": "Prepare XCode App", 
     "type": "com.servertribe.attune.tuples.StepGroupTuple"
 }

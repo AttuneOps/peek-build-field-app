@@ -1,0 +1,10 @@
+{
+    "enabled": true, 
+    "interpreter": 1, 
+    "key": "xcodebuildappipa", 
+    "name": "XCode Build App IPA", 
+    "osCredKey": "macosuser", 
+    "serverKey": "macoshost", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

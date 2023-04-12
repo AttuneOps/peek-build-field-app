@@ -1,0 +1,25 @@
+source "{appBuildDirectory}/{appId}/attune_xcode_settings.sh"
+cd $XCODE_SOURCE_FOLDER
+
+PLIST="${XCODE_ARCHIVE_PATH}.xcarchive/exportOptionsPlist.plist"
+cp "../../scripts/exportOptionsPlist.plist.template" \
+    "${PLIST}"
+    
+PLIST=$1
+
+echo 'populating exportOptionsPlist.plist '"${PLIST}"
+# delete bundle id and profile name from template
+/usr/libexec/PlistBuddy \
+    -c 'Delete :provisioningProfiles' "${PLIST}"
+
+# update bundle id
+echo "new ipa bundle id: ${XCODE_APP_BUNDLE_IDENTIFIER}"
+echo "new ipa provisioning profile name: ${XCODE_PROVISIONING_PROFILE_UUID}"
+/usr/libexec/PlistBuddy -c \
+"Add :provisioningProfiles:${XCODE_APP_BUNDLE_IDENTIFIER} string ${XCODE_PROVISIONING_PROFILE_UUID}" \
+    "${PLIST}"
+
+# replace team id
+echo "new ipa team id: $XCODE_DEVELOPEMENT_TEAM_ID"
+/usr/libexec/PlistBuddy -c \
+    "Set :teamID $XCODE_DEVELOPEMENT_TEAM_ID" PLIST

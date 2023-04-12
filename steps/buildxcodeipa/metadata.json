@@ -1,0 +1,18 @@
+{
+    "concurrency": 1, 
+    "enabled": true, 
+    "isBlueprint": false, 
+    "key": "buildxcodeipa", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "xcodepopulateplistforipa"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "xcodebuildappipa"
+        }
+    ], 
+    "name": "Build XCode IPA", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

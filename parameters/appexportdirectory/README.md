@@ -1,0 +1,1 @@
+The directory where apps will be placed. /Users/peek/Downloads

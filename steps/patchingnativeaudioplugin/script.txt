@@ -1,0 +1,9 @@
+DIR="{appBuildDirectory}/{appId}"
+cd "$DIR"
+
+echo Patching native-audio plugin
+
+#  https://github.com/danielsogl/awesome-cordova-plugins/issues/2685#issuecomment-567261609
+sed -i 's/@"www"/@"public"/' \
+    ios/capacitor-cordova-ios-plugins/sources/CordovaPluginNativeaudio/NativeAudio.m
+
