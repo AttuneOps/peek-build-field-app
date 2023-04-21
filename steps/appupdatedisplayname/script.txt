@@ -3,5 +3,7 @@ cd "$DIR"
 
 JSON="capacitor.config.json"
 
-jq '.appName = "{appDisplayName}"' $JSON 
-jq '.appId = "{appId}"' $JSON 
+cat $JSON \
+    | jq '.appName = "{appDisplayName}"' \
+    | jq '.appId = "{appId}"' \
+    | tee $JSON

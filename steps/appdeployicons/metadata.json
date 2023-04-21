@@ -1,0 +1,11 @@
+{
+    "archiveKey": "peekicons", 
+    "deployPath": "{appBuildDirectory}/{appId}/staged_icons", 
+    "enabled": true, 
+    "key": "appdeployicons", 
+    "name": "App Deploy Icons", 
+    "osCredKey": "macosuser", 
+    "serverKey": "macoshost", 
+    "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
+    "unpack": true
+}

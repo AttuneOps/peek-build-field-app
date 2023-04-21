@@ -5,10 +5,22 @@ CONFIG_TS="src/app/pages/config/config.page.ts"
 
 sed -iv 's/Peek Config/{appEnvironment} Peek Config/g' \
     "${CONFIG_TS}"
+    
+grep "Peek Config" "${CONFIG_TS}"
+
+
+CONFIG_HTML="src/app/pages/config/config.page.html"
+
+sed -iv 's/Peek Field App/Peek {appEnvironment} Field App/g' \
+    "${CONFIG_HTML}"
+    
+grep "Field App" "${CONFIG_HTML}"
 
 
 VERSION_TS="src/environments/peek-app-environment.ts"
 
 
 sed -iv 's/version:.*/version: "v{appDotVersion} b{appBuildVersion}",/g' \
-    "${CONFIG_TS}"
+    "${VERSION_TS}"
+
+grep version "${VERSION_TS}"

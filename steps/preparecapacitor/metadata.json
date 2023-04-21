@@ -23,6 +23,18 @@
         {
             "order": 350, 
             "stepKey": "runcapcopyios"
+        }, 
+        {
+            "order": 400, 
+            "stepKey": "appdeployicons"
+        }, 
+        {
+            "order": 450, 
+            "stepKey": "appupdateicon"
+        }, 
+        {
+            "order": 500, 
+            "stepKey": "runcapupdateicons"
         }
     ], 
     "name": "Prepare Capacitor", 

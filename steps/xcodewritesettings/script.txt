@@ -47,7 +47,7 @@ export XCODE_APP_NAME='{appDisplayName}'
 
 # automatic populated parameters for xcode
 # relative to source folder above
-export XCODE_WORKSPACE=$XCODE_APP_NAME'.xcworkspace'
+export XCODE_WORKSPACE="$XCODE_APP_NAME.xcworkspace"
 export XCODE_BUILD_CONFIGURATION='Release'
 export XCODE_SCHEME=$XCODE_APP_NAME
 export XCODE_CACHED_PROVISIONING_PROFILE_PATH="${XCODE_PROFILE_DIR}/${XCODE_PROVISIONING_PROFILE_UUID}.mobileprovision"

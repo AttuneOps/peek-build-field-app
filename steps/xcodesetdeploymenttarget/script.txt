@@ -6,5 +6,5 @@ xcrun agvtool new-version -all {appBuildVersion}
 xcrun agvtool new-marketing-version {appDotVersion}
 
 
-sed -iv 's/MARKETING_VERSION = .*/MARKETING_VERSION = {appDotVersion};/g' \
+sed -iv 's/IPHONEOS_DEPLOYMENT_TARGET = .*/IPHONEOS_DEPLOYMENT_TARGET = 15.0;/g' \
     *xcodeproj/project.pbxproj

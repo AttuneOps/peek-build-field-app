@@ -1,0 +1,4 @@
+cd "{appBuildDirectory}/{appId}"
+
+npx cap open ios
+false

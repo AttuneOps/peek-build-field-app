@@ -26,10 +26,14 @@
         }, 
         {
             "order": 250, 
-            "stepKey": "archiveiosapp"
+            "stepKey": "xcodecapopen"
         }, 
         {
             "order": 300, 
+            "stepKey": "archiveiosapp"
+        }, 
+        {
+            "order": 350, 
             "stepKey": "buildxcodeipa"
         }
     ], 

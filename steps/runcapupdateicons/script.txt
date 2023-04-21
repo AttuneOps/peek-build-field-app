@@ -1,0 +1,12 @@
+DIR="{appBuildDirectory}/{appId}"
+cd "$DIR"
+
+# one-off install image asset automation tool
+npm install -g cordova-res
+
+
+# generate image assets for xcode project
+# cordova-res ios --skip-config --copy
+
+# For just the icon, run
+cordova-res ios --skip-config --copy --type icon

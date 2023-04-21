@@ -8,3 +8,5 @@ then
 else
     echo "Directory doesn't exist, good."
 fi
+
+mkdir -p "$DIR"

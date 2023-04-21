@@ -1,8 +1,8 @@
 {
     "enabled": true, 
     "interpreter": 1, 
-    "key": "apphardcodepeekhost", 
-    "name": "App Hardcode Peek Host", 
+    "key": "xcodecapopen", 
+    "name": "XCode Cap Open", 
     "osCredKey": "macosuser", 
     "serverKey": "macoshost", 
     "successExitCode": 0, 

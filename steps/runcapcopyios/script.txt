@@ -1,3 +1,4 @@
+
 DIR="{appBuildDirectory}/{appId}"
 cd "$DIR"
 

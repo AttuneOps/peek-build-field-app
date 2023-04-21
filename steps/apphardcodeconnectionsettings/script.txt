@@ -1,7 +1,7 @@
 DIR="{appBuildDirectory}/{appId}"
 cd "$DIR"
 
-cat <<EOF > src/@peek/peek_core_device/_private/tuples/server-info-tuple-defaults.ts
+cat <<EOF | tee src/@peek/peek_core_device/_private/tuples/server-info-tuple-defaults.ts
 export const SERVER_INFO_TUPLE_DEFAULTS = {
     host: '{appPeekHardcodedHost}',
     useSsl: {appPeekHardcodedHostUseSsl},

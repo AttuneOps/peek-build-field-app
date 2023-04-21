@@ -14,10 +14,22 @@
         }, 
         {
             "order": 100, 
-            "stepKey": "xcodeshowsdks"
+            "stepKey": "xcoderenameapp"
         }, 
         {
             "order": 150, 
+            "stepKey": "xcodesetdeploymenttarget"
+        }, 
+        {
+            "order": 200, 
+            "stepKey": "xcodepodinstall"
+        }, 
+        {
+            "order": 250, 
+            "stepKey": "xcodeshowsdks"
+        }, 
+        {
+            "order": 300, 
             "stepKey": "xcodeshowprojectbuildoptions"
         }
     ], 

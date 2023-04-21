@@ -153,6 +153,7 @@ tar cvjf $(date "+%y%m%d_%H%M")_peek_field_app.tar.bz2 \
     peek_field_app
 
  |
+| Peek Icons | Version Controlled Files | None |
 
 
 

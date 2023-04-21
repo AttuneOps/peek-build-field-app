@@ -1,0 +1,17 @@
+echo "This is disabled, rename by hand."
+# cd "{appBuildDirectory}/{appId}"
+
+# cd ios/app
+
+# sed -i 's/\tname = .*/\tname = "{appDisplayName}";/g' \
+#     App.xcodeproj/project.pbxproj
+
+# sed -i 's/BuildableName = .*/BuildableName = "{appDisplayName}.app"/g' \
+#     App.xcodeproj/xcshareddata/xcschemes/App.xcscheme
+
+# sed -i 's/BlueprintName = .*/BlueprintName = "{appDisplayName}"/g' \
+#     App.xcodeproj/xcshareddata/xcschemes/App.xcscheme
+    
+# grep "{appDisplayName}" \
+#     App.xcodeproj/xcshareddata/xcschemes/App.xcscheme \
+#     App.xcodeproj/project.pbxproj

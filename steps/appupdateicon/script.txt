@@ -1,0 +1,5 @@
+cd "{appBuildDirectory}/{appId}"
+
+mkdir -vp resources
+
+cp -v staged_icons/{appEnvironment}.png resources/icon.png

@@ -1,5 +1,6 @@
 DIR="{appBuildDirectory}/{appId}"
 cd "$DIR"
+echo $PATH
 
 SCSS="src/_variables.scss"
 
@@ -27,3 +28,5 @@ else
     echo "Unknown environment |{appEnvironment}|" >&2
     false
 fi
+
+grep '$primary-color:' $SCSS
