@@ -1,6 +1,7 @@
 {
     "concurrency": 1, 
     "enabled": true, 
+    "externalUuid4": "5a1f299a-a6fc-4bed-bb67-355123d3cfe4", 
     "isBlueprint": false, 
     "key": "personaliseapp", 
     "links": [

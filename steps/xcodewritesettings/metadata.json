@@ -1,5 +1,6 @@
 {
     "enabled": true, 
+    "externalUuid4": "8cbb47b6-0943-4926-b323-181394158b57", 
     "interpreter": 1, 
     "key": "xcodewritesettings", 
     "name": "XCode Write Settings", 

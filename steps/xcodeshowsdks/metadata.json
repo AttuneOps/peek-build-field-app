@@ -1,5 +1,6 @@
 {
     "enabled": true, 
+    "externalUuid4": "776a694a-a837-48a7-b760-d93618613fd1", 
     "interpreter": 1, 
     "key": "xcodeshowsdks", 
     "name": "XCode Show SDKs", 

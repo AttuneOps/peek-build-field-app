@@ -1,5 +1,6 @@
 {
     "enabled": true, 
+    "externalUuid4": "b05e884e-8b65-4796-a7be-1f664c8a7047", 
     "interpreter": 1, 
     "key": "xcodecleanandanalyze", 
     "name": "XCode Clean and Analyze", 

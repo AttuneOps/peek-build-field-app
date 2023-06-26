@@ -1,5 +1,6 @@
 {
     "enabled": true, 
+    "externalUuid4": "790d6edb-110e-472c-9c79-ddffc8aa0630", 
     "interpreter": 1, 
     "key": "xcodeshowprojectbuildoptions", 
     "name": "XCode Show Project Build Options", 

@@ -1,5 +1,6 @@
 {
     "enabled": true, 
+    "externalUuid4": "c4cbd61a-ca46-4aad-b97a-6db6145603c5", 
     "interpreter": 1, 
     "key": "xcodepodinstall", 
     "name": "XCode Pod Install", 

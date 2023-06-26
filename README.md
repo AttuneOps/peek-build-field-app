@@ -42,52 +42,8 @@ You can learn more about Attune through
 
 # Clone this Project
 
-Clone this project into your own instance of Attune.
-
-<img src="https://www.servertribe.com/wp-content/uploads/2023/02/Attune-clone-new-project-01.png" alt="clone a new project"/>
-
----
-
-Paste the GIT repository URL into Attune and Select Clone.
-
-<img src="https://www.servertribe.com/wp-content/uploads/2023/02/Attune-clone-new-project-02.png" alt="clone a new project"/>
-
----
-
-**Now that this project is in your Attune instance you can begin creating
-Jobs.**
-
-Navigate to the Plan workspace and create a Job from a Blueprint in the
-Project you cloned.
-
-<img src="https://www.servertribe.com/wp-content/uploads/2023/02/Attune-plan-new-job-11.png" alt="plan a new job"/>
-
----
-
-Configure the Parameters for the Job you created. Create the Values you're
-missing in the next step.
-
-<img src="https://www.servertribe.com/wp-content/uploads/2023/02/Attune-plan-new-job-12.png" alt="plan a new job"/>
-
----
-
-Create the Values required to fill the Parameters for the Job.
-
-<img src="https://www.servertribe.com/wp-content/uploads/2023/02/Attune-plan-new-job-13-1.png" alt="plan a new job"/>
-
----
-
-Run your Job.
-
-<img src="https://www.servertribe.com/wp-content/uploads/2023/02/Attune-run-job-01.png" alt="run your job"/>
-
----
-
-**Congratulations, you’ve run a cloned project.**
-
-If you need further assistance, please explore our help.
-
-<img width=200 src="https://www.servertribe.com/wp-content/uploads/2023/02/Attune-get-help-01.png" alt="get help"/>
+To clone this project into your own instance of Attune, follow the
+[Clone a GIT Project How To Instructions](https://servertribe-attune.readthedocs.io/en/latest/howto/design_workspace/clone_project.html).
 
 
 
@@ -111,49 +67,38 @@ This Project contains the following Blueprints.
 | ---- | ---- | ---------------- | ------- |
 | App Build Directory | Text | `appbuilddirectory` | The local macOS directory where the app will be built. |
 | App Build Version | Text | `appbuildversion` | Example 12345678 |
+| App Display Name | Text | `appdisplayname` |  |
 | App Dot Version | Text | `appdotversion` | Example 1.2.3.4 |
+| App Environment | Text | `appenvironment` | DEV, TEST, UAT, PROD |
+| App Export Directory | Text | `appexportdirectory` | The directory where apps will be placed. /Users/peek/Downloads |
 | App Icon File Name | Text | `appiconfilename` | The app icon to use. |
 | App ID | Text | `appid` | The AppId to build Peek with, EG, com.synerty.peek |
+| App Peek Hardcoded Host | Text | `apppeekhardcodedhost` |  |
+| App Peek Hardcoded Host Port | Text | `apppeekhardcodedhostport` | The port for the app to connect to, for example 443 |
+| App Peek Hardcoded Host Use SSL | Text | `apppeekhardcodedhostusessl` | true or false |
 | App Primary Colour | Text | `appprimarycolour` | Leave unset for production. For DEV, TEST, etc, set this to the background colour you'd like the app to use, EG #ff9900 |
+| Build for Production | Text | `buildforproduction` | Values: true or false |
 | macOS Host | Linux/Unix Node | `macoshost` | The macOS host to build the app on. |
 | macOS User | Linux/Unix Credential | `macosuser` | The unix user to login to the macOS host with |
+| Peek Field App Source Linux User | Linux/Unix Credential | `peekfieldappsourcelinuxuser` |  |
 | Peek Field App Source Node | Linux/Unix Node | `peekfieldappsourcenode` | The Peek server running the peek field service that we can pull the peek_field_app from. |
 | Peek Field Service Host / IP | Text | `peekfieldservicehostip` | The hostname or IP address used to for the Peek Field App talk to the Peek Field Service |
 | Peek Field Service Port | Text | `peekfieldserviceport` | The TCP Port used to for the Peek Field App talk to the Peek Field Service |
 | Peek Field Service - Use SSL | Text | `peekfieldserviceusessl` | true or false - Should the Peek Field App expect to use SSL to talk to the Peek Field Service |
-| Peek Field App Source Linux User | Linux/Unix Credential | `peekfieldappsourcelinuxuser` | None |
-| Build for Production | Text | `buildforproduction` | Values: true or false |
-| XCode Team | Text | `xcodeteam` | None |
-| App Export Directory | Text | `appexportdirectory` | The directory where apps will be placed. /Users/peek/Downloads |
-| XCode Provisioning Profile Name | Text | `xcodeprovisioningprofilename` | None |
-| XCode Provisioning Profile UUID | Text | `xcodeprovisioningprofileuuid` | None |
 | XCode Auto Code Sign Style | Text | `xcodeautocodesignstyle` | Values: true or falce |
-| App Peek Hardcoded Host Port | Text | `apppeekhardcodedhostport` | The port for the app to connect to, for example 443 |
-| App Peek Hardcoded Host | Text | `apppeekhardcodedhost` | None |
-| App Peek Hardcoded Host Use SSL | Text | `apppeekhardcodedhostusessl` | true or false |
-| App Environment | Text | `appenvironment` | DEV, TEST, UAT, PROD |
-| App Display Name | Text | `appdisplayname` | None |
+| XCode Provisioning Profile Name | Text | `xcodeprovisioningprofilename` |  |
+| XCode Provisioning Profile UUID | Text | `xcodeprovisioningprofileuuid` |  |
+| XCode Team | Text | `xcodeteam` |  |
 
 
 
 
 ## Files
 
-
 | Name | Type | Comment |
 | ---- | ---- | ------- |
-| peek_field_app | Large Archives | SSH to the peek server, and run the following
-
-```````[ "${USER}" == 'peek' ] || echo "You are NOT the peek user" >&2
-cd
-
-tar cvjf $(date "+%y%m%d_%H%M")_peek_field_app.tar.bz2 \
-    --exclude node_modules \
-    -C synerty-peek*/lib/python*/site-packages \
-    peek_field_app
-
- |
-| Peek Icons | Version Controlled Files | None |
+| peek_field_app | Large Archives | SSH to the peek server, and run the following<br><br>```````[ "${USER}" == 'peek' ] || echo "You are NOT the peek user" >&2<br>cd<br><br>tar cvjf $(date "+%y%m%d_%H%M")_peek_field_app.tar.bz2 \<br>    --exclude node_modules \<br>    -C synerty-peek*/lib/python*/site-packages \<br>    peek_field_app<br><br> |
+| Peek Icons | Version Controlled Files |  |
 
 
 

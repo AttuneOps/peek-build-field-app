@@ -1,5 +1,6 @@
 {
     "enabled": true, 
+    "externalUuid4": "e947b429-71a4-4e80-a0e4-8ce64a6ff1c3", 
     "interpreter": 1, 
     "key": "xcodecapopen", 
     "name": "XCode Cap Open", 

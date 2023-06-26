@@ -1,5 +1,6 @@
 {
     "enabled": true, 
+    "externalUuid4": "af367818-8a5a-4a72-b0ef-57dc7a259cb9", 
     "interpreter": 1, 
     "key": "xcodepopulateplistforipa", 
     "name": "XCode Populate PList for IPA", 

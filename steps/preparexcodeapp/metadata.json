@@ -1,6 +1,7 @@
 {
     "concurrency": 1, 
     "enabled": true, 
+    "externalUuid4": "58e620d6-72c6-4cbb-93ef-c00957324fe2", 
     "isBlueprint": false, 
     "key": "preparexcodeapp", 
     "links": [

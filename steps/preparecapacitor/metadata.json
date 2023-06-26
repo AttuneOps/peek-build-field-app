@@ -1,6 +1,8 @@
 {
+    "actionOnStepFail": null, 
     "concurrency": 1, 
     "enabled": true, 
+    "externalUuid4": "1b1a2ba7-2588-4d65-884e-a54ed89c08ef", 
     "isBlueprint": false, 
     "key": "preparecapacitor", 
     "links": [
@@ -18,22 +20,26 @@
         }, 
         {
             "order": 300, 
-            "stepKey": "patchingnativeaudioplugin"
+            "stepKey": "patchnativeaudioplugin"
         }, 
         {
             "order": 350, 
-            "stepKey": "runcapcopyios"
+            "stepKey": "patchpodspeekframeworkssh"
         }, 
         {
             "order": 400, 
-            "stepKey": "appdeployicons"
+            "stepKey": "runcapcopyios"
         }, 
         {
             "order": 450, 
-            "stepKey": "appupdateicon"
+            "stepKey": "appdeployicons"
         }, 
         {
             "order": 500, 
+            "stepKey": "appupdateicon"
+        }, 
+        {
+            "order": 550, 
             "stepKey": "runcapupdateicons"
         }
     ], 

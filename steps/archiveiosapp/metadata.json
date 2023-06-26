@@ -1,6 +1,7 @@
 {
     "concurrency": 1, 
     "enabled": true, 
+    "externalUuid4": "f7578968-17f0-4f8c-8006-8ad08c8986f9", 
     "isBlueprint": false, 
     "key": "archiveiosapp", 
     "links": [

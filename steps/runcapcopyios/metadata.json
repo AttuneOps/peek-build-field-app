@@ -1,5 +1,6 @@
 {
     "enabled": true, 
+    "externalUuid4": "9fa93d0c-00c6-44c1-ac87-1e3d61d0e80f", 
     "interpreter": 1, 
     "key": "runcapcopyios", 
     "name": "Run Cap Copy iOS", 

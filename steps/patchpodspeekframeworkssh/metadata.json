@@ -1,8 +1,10 @@
 {
+    "actionOnStepFail": "stop", 
     "enabled": true, 
+    "externalUuid4": "62e364a5-c07c-40b9-a8eb-1513365b468d", 
     "interpreter": 1, 
-    "key": "patchingnativeaudioplugin", 
-    "name": "Patching native-audio plugin", 
+    "key": "patchpodspeekframeworkssh", 
+    "name": "Patch Pods-peek-frameworks.sh", 
     "osCredKey": "macosuser", 
     "serverKey": "macoshost", 
     "successExitCode": 0, 

@@ -1,9 +1,10 @@
 {
+    "actionOnStepFail": null, 
     "enabled": true, 
-    "externalUuid4": "c730002c-d4e7-4990-83e4-ab64dbf3747e", 
+    "externalUuid4": "de0821d4-0af5-4ebe-8a4a-b9cc7a405ef4", 
     "interpreter": 1, 
-    "key": "xcodeinspectarchiveprovisioningprofile", 
-    "name": "XCode Inspect Archive Provisioning Profile", 
+    "key": "patchnativeaudioplugin", 
+    "name": "Patch native-audio plugin", 
     "osCredKey": "macosuser", 
     "serverKey": "macoshost", 
     "successExitCode": 0, 

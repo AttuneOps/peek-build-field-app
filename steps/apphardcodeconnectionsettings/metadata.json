@@ -1,5 +1,6 @@
 {
     "enabled": true, 
+    "externalUuid4": "e22137cc-4748-416f-a91c-668dcc39d388", 
     "interpreter": 1, 
     "key": "apphardcodeconnectionsettings", 
     "name": "App Hardcode  Connection Settings", 

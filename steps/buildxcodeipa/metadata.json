@@ -1,6 +1,7 @@
 {
     "concurrency": 1, 
     "enabled": true, 
+    "externalUuid4": "3711de29-de32-440c-913e-27072ebf3177", 
     "isBlueprint": false, 
     "key": "buildxcodeipa", 
     "links": [

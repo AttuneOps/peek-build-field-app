@@ -2,6 +2,7 @@
     "archiveKey": "peekfieldapp", 
     "deployPath": "{appBuildDirectory}/{appId}", 
     "enabled": true, 
+    "externalUuid4": "87ff2085-1e7d-4676-9224-301a54236171", 
     "key": "deploypeekfieldapp", 
     "name": "Deploy peek_field_app", 
     "osCredKey": "macosuser", 

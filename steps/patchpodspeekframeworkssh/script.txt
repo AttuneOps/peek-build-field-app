@@ -1,0 +1,9 @@
+DIR="{appBuildDirectory}/{appId}"
+cd "$DIR"
+
+echo Patching native-audio plugin
+
+# Pathching pod script
+sed -i 's/source="$(readlink "${source}")"/source="$(readlink -f "${source}")"/g' \
+        ios/App/Pods/Target\ Support\ Files/Pods-peek/Pods-peek-frameworks.sh
+

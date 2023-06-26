@@ -1,5 +1,6 @@
 {
     "enabled": true, 
+    "externalUuid4": "32fd5ee9-f108-4b56-85a4-85a39d97c08d", 
     "interpreter": 1, 
     "key": "xcodesettargetversion", 
     "name": "XCode Set Target Version", 

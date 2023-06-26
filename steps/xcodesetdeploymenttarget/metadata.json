@@ -1,5 +1,6 @@
 {
     "enabled": true, 
+    "externalUuid4": "ed142a8a-0864-4546-8594-dc9153f81d0a", 
     "interpreter": 1, 
     "key": "xcodesetdeploymenttarget", 
     "name": "XCode Set Deployment Target", 

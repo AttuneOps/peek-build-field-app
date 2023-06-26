@@ -1,5 +1,6 @@
 {
     "enabled": true, 
+    "externalUuid4": "41235f73-9265-4375-828b-8549842412c8", 
     "interpreter": 1, 
     "key": "cleanbuilddirectory", 
     "name": "Clean Build Directory", 

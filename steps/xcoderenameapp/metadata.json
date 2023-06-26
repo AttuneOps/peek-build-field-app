@@ -1,5 +1,6 @@
 {
     "enabled": true, 
+    "externalUuid4": "d7cdd73d-4474-4354-aa31-1c1e12b3bd68", 
     "interpreter": 1, 
     "key": "xcoderenameapp", 
     "name": "XCode Rename App", 

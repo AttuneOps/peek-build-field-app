@@ -2,6 +2,7 @@
     "archiveKey": "peekicons", 
     "deployPath": "{appBuildDirectory}/{appId}/staged_icons", 
     "enabled": true, 
+    "externalUuid4": "d758864e-41a1-4a4c-9f9c-4bd5d2a249c4", 
     "key": "appdeployicons", 
     "name": "App Deploy Icons", 
     "osCredKey": "macosuser", 

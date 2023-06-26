@@ -1,5 +1,6 @@
 {
     "enabled": true, 
+    "externalUuid4": "155fa3a7-46c8-401a-9b59-5ed07b7aeb6f", 
     "interpreter": 1, 
     "key": "runnpminstall", 
     "name": "Run NPM Install", 

@@ -1,5 +1,6 @@
 {
     "enabled": true, 
+    "externalUuid4": "8bad4341-77bc-4fc7-bccd-e69cb7226cdb", 
     "interpreter": 1, 
     "key": "appupdateconfigscreenversion", 
     "name": "App Update Config Screen Version", 

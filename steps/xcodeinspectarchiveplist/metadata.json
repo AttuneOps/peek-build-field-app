@@ -1,5 +1,6 @@
 {
     "enabled": true, 
+    "externalUuid4": "59ab1c20-b29a-4f0c-9903-91564d5d68a8", 
     "interpreter": 1, 
     "key": "xcodeinspectarchiveplist", 
     "name": "XCode Inspect Archive PList", 
