@@ -1,0 +1,4 @@
+DIR="{appBuildDirectory}/{appId}"
+cd "$DIR"
+
+cp -pr ~/Downloads/peek_field_app/* .

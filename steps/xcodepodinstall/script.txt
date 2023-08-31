@@ -6,6 +6,9 @@ set -x
 echo "pod should be installed under the users home directory"
 echo "Ideally ~/opt/cocoapods/bin/pod"
 echo .
+echo "If it's not, follow"
+echo "Follow the Sudo-less installation here"
+echo "https://guides.cocoapods.org/using/getting-started.html#getting-started"
 which pod
 echo .
 
@@ -14,24 +17,6 @@ echo "Checking for Podfile"
 echo .
 ls -l Podfile
 echo .
-
-echo "Adding patch to podfile for."
-echo 'https://stackoverflow.com/questions/75574268/missing-file-libarclite-iphoneos-a-xcode-14-3'
-echo .
-
-cat <<'EOF' >> Podfile
-
-post_install do |installer|
-    installer.generated_projects.each do |project|
-          project.targets.each do |target|
-              target.build_configurations.each do |config|
-                  config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
-               end
-          end
-   end
-end
-
-EOF
 
 echo "Running pod install"
 echo "."

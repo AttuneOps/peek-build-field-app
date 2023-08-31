@@ -57,6 +57,12 @@ This Project contains the following Blueprints.
 ### Build Peek IOS Field App
 
 
+### Open Peek IOS Field App with XCode
+
+
+### Build Peek IOS Field App from Downloads
+
+
 
 
 
@@ -80,6 +86,7 @@ This Project contains the following Blueprints.
 | Build for Production | Text | `buildforproduction` | Values: true or false |
 | macOS Host | Linux/Unix Node | `macoshost` | The macOS host to build the app on. |
 | macOS User | Linux/Unix Credential | `macosuser` | The unix user to login to the macOS host with |
+| NG Build for Production | Text | `ngbuildforproduction` | true or false |
 | Peek Field App Source Linux User | Linux/Unix Credential | `peekfieldappsourcelinuxuser` |  |
 | Peek Field App Source Node | Linux/Unix Node | `peekfieldappsourcenode` | The Peek server running the peek field service that we can pull the peek_field_app from. |
 | Peek Field Service Host / IP | Text | `peekfieldservicehostip` | The hostname or IP address used to for the Peek Field App talk to the Peek Field Service |

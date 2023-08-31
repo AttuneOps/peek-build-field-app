@@ -1,0 +1,36 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "ea45866f-5e50-48e1-a0f9-53ddcc278a7f", 
+    "isBlueprint": true, 
+    "key": "openpeekiosfieldappwithxcode", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "cleanbuilddirectory"
+        }, 
+        {
+            "order": 100, 
+            "stepKey": "pullappfrompeekhost"
+        }, 
+        {
+            "order": 200, 
+            "stepKey": "personaliseapp"
+        }, 
+        {
+            "order": 300, 
+            "stepKey": "preparecapacitor"
+        }, 
+        {
+            "order": 400, 
+            "stepKey": "preparexcodeapp"
+        }, 
+        {
+            "order": 500, 
+            "stepKey": "xcodecapopen"
+        }
+    ], 
+    "name": "Open Peek IOS Field App with XCode", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

@@ -20,6 +20,11 @@ then
     sed -i 's/$primary-color:.*/$primary-color: #800080;/g' $SCSS
 
 
+elif  [ '{appEnvironment}' = 'DEMO' ]
+then
+    echo "Demonstration stays as is."
+
+
 elif  [ '{appEnvironment}' = 'PRD' ]
 then
     echo "Production stays as is."

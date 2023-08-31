@@ -1,7 +1,7 @@
 DIR="{appBuildDirectory}/{appId}"
 cd "$DIR"
 
-if true
+if {ngBuildForProduction}
 then
     echo Building Angular - Peek field app for production
     ng build --prod --optimization  --common-chunk --vendor-chunk

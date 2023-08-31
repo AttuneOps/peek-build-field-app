@@ -1,0 +1,7 @@
+{
+    "externalUuid4": "110f3a0b-7ee6-4adf-8b23-31272ed439b3", 
+    "key": "ngbuildforproduction", 
+    "name": "NG Build for Production", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}
